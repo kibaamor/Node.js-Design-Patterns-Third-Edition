@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.cjs --mode production",
-    "start:api": "node -r esm ./src/api.js",
-    "start:server": "node -r esm ./src/server.js",
+    "start:api": "node ./src/api.js",
+    "start:server": "node ./src/server.js",
     "start": "npm run build && concurrently \"npm run start:api\" \"npm run start:server\""
   },
   "keywords": [],
@@ -27,7 +27,6 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "esm": "^3.2.25",
     "fastify": "^2.13.0",
     "fastify-cors": "^3.0.3",
     "fastify-static": "^2.6.0",
